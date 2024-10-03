@@ -1,0 +1,52 @@
+.video-preview1,.video-preview2,.video-preview3,.video-preview4,.video-preview5{
+  display: inline-block;
+  height: 350px;
+  width: 350px;
+}
+.thumbnail1,.thumbnail2,.thumbnail3,.thumbnail4,.thumbnail5{
+  width: 100%;
+}
+.thumb1,.thumb2,.thumb3,.thumb4,.thumb5{
+  height: 225px;
+  width: 350px;
+  border-radius: 20px;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+.video-info1,.video-info2,.video-info3,.video-info4,.video-info5{
+  display: grid;
+  grid-template-columns: 60px 1fr;
+}
+.channel-pic1,.channel-pic2,.channel-pic3,.channel-pic4,.channel-pic5{
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+.pic1,.pic2,.pic3,.pic4,.pic5{
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+}
+.title1,.title2,.title3,.title4,.title5{
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+.channel1,.channel2,.channel3,.channel4,.channel5{
+  font-family: Arial;
+  font-size: 14px;
+  color: rgb(65, 64, 64);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.view1,.view2,.view3,.view4,.view5{
+  margin-top: 5px;
+}
+.video-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 20px;
+}

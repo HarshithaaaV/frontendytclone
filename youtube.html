@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube Clone</title>
+ <link rel="stylesheet" href="styles/header.css">
+ <link rel="stylesheet" href="styles/sidebar.css">
+ <link rel="stylesheet" href="styles/shorts.css">
+
+ <style>
+.p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.body{
+  margin:0px;
+  height: 1500px;
+  padding-top: 80px;
+  padding-left: 300px;
+}
+.video-preview1,.video-preview2,.video-preview3,.video-preview4,.video-preview5,.video-preview6{
+  display: inline-block;
+  height: 425px;
+  width: 425px;
+}
+.thumbnail1,.thumbnail2,.thumbnail3,.thumbnail4,.thumbnail5,.thumbnail6{
+  width: 100%;
+  position: relative;
+}
+.thumb1,.thumb2,.thumb3,.thumb4,.thumb5,.thumb6{
+  height: 275px;
+  width: 425px;
+  border-radius: 20px;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+.video-info1,.video-info2,.video-info3,.video-info4,.video-info5,.video-info6{
+  display: grid;
+  grid-template-columns: 60px 1fr;
+}
+.channel-pic1,.channel-pic2,.channel-pic3,.channel-pic4,.channel-pic5,.channel-pic6{
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+.pic1,.pic2,.pic3,.pic4,.pic5,.pic6{
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+}
+.title1,.title2,.title3,.title4,.title5,.title6{
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+.channel1,.channel2,.channel3,.channel4,.channel5,.channel6{
+  font-family: Arial;
+  font-size: 14px;
+  color: rgb(65, 64, 64);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.view1,.view2,.view3,.view4,.view5,.view6{
+  margin-top: 5px;
+}
+.video-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  row-gap: 0px;
+  column-gap: 20px;
+}
+
+@media (max-width: 1000px) {
+  .video-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.video-time1,.video-time2,.video-time3,.video-time4,.video-time5,.video-time6{
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 500;
+
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  background-color: rgb(57, 57, 57);
+  color: white;
+  position: absolute;
+  bottom: 14px;
+  right: 8px;
+  border-radius: 5px;
+  opacity: 0.7;
+}
+ </style>
+</head>
+
+<body class="body">
+  <div class="header">
+    <div class="left-section">
+      <img class="hamburger-menu" src="icons/hamburger-menu.svg">
+      <img class="youtube-logo" src="icons/youtube-logo.svg">
+    </div>
+    <div class="middle-section">
+        <input class="search" type="text" placeholder="Search...">
+      <button class="search-logo-button">
+        <img class="search-logo" src="icons/search-logo.svg">
+        <div class="tool-tip">Search</div>
+       </button>
+      <button class="voice-search-icon-button"> 
+        <img class="voice-search-icon" src="icons/voice-search-icon.svg">
+        <div class="tool-tip">Search with your voice</div>
+      </button>
+    </div>
+    <div class="right-section">
+      <div class="upload-container">
+        <img class="upload" src="icons/upload.svg">
+        <div class="tool-tip">Create</div>
+      </div>
+      <div class="youtube-apps-container">
+        <img class="youtube-apps" src="icons/youtube-apps.svg">
+        <div class="tool-tip">Youtube apps</div>
+      </div>
+      <div class="notification-icon">
+          <img class="notifications" src="icons/notifications.svg">
+          <div class="tool-tip">Notifications</div>
+        <div class="notification-count">11</div>
+      </div>
+      <img class="channel-logo" src="icons/channel-logo.jpg">
+    </div>
+  </div>
+
+  <div class="sidebar">
+      <div class="sidebar-link">
+        <div class="home-icon"><img src="icons/home.svg"></div>
+        <div class="home-text"><p>Home</p></div>
+      </div>
+    
+      <div class="sidebar-link">
+        <div class="ytshort-icon"><img src="icons/youtube-shorts-logo-15251.svg"></div>
+        <div class="ytshort-text"> <p>Shorts</p></div> 
+      </div>
+    
+       <div class="sidebar-link">
+        <div class="subscribe-icon"><img src="icons/subscriptions.svg"></div>
+        <div class="subscribe-text"> <p>Subscriptions</p></div> 
+      </div>
+
+      <div class="sidebar-link">
+        <div class="library-icon"><img src="icons/library.svg"></div>
+        <div class="library-text"> <p>Library</p></div> 
+      </div>
+
+      <hr>
+
+      <div class="explore">
+        <div class="explore-text"> <p>Explore</p></div> 
+
+        <div class="sidebar-link">
+          <div class="trending-icon"><img class="trending" src="icons/trending-topic.png"></div>
+        <div class="trending-text"><p>Trending</p></div>
+      </div>
+        <div class="sidebar-link">
+          <div class="film-icon"><img class="film" src="icons/video.png"></div>
+        <div class="film-text"><p>Films</p></div>
+      </div>
+        <div class="sidebar-link">
+          <div class="stream-icon"><img class="stream" src="icons/stream.png"></div>
+        <div class="stream-text"><p>Live</p></div>
+      </div>
+        <div class="sidebar-link">
+          <div class="sport-icon"><img class="sports" src="icons/trophy.png"></div>
+        <div class="sport-text"><p>Sports</p></div>
+      </div>
+        <div class="sidebar-link">
+          <div class="shopping-icon"><img class="shopping" src="icons/bag.png"></div>
+        <div class="shopping-text"><p>Shopping</p></div>
+      </div>
+     </div>
+
+      <hr>
+      
+      <div class="sidebar-link">
+        <div class="settings-icon"><img class="settings" src="icons/setting.png"></div>
+        <div class="settings-text"><p>Settings</p></div>
+      </div>
+  </div>
+
+  <div class="video-grid">
+    <div class="video-preview1">
+
+      <div class="thumbnail1">
+        <img class="thumb1" src="Thumbnails/thumbnail1.webp">
+        <div class="video-time1">32:24</div>
+      </div>
+  
+      <div class="video-info1">
+  
+        <div class="channel-pic1">
+          <img class="pic1" src="channel-pics/channel-pic1.jpg">
+        </div>
+  
+        <div class="info1">
+          <p class="title1">
+            THE HUMAN FUTURE:A case for optimism
+          </p>
+          <p class="channel1">
+            melodysheep
+          </p>
+          <p class="view1">
+            2.3M views &#183 2 months ago
+          </p>
+        </div>
+  
+      </div>
+  
+    </div>
+  
+    <div class="video-preview2">
+  
+      <div class="thumbnail2">
+        <img class="thumb2" src="Thumbnails/thumbnail2.webp">
+        <div class="video-time2">6:31:23</div>
+      </div>
+  
+      <div class="video-info2">
+  
+        <div class="channel-pic2">
+          <img class="pic1" src="channel-pics/channel-pic2.jpg">
+        </div>
+  
+        <div class="info2">
+          <p class="title2">
+            HTML & CSS Full Course - Beginner to Pro
+          </p>
+          <p class="channel2">
+            supersimpledev
+          </p>
+          <p class="view2">
+            7.3M views &#183 1 year ago
+          </p>
+        </div>
+  
+      </div>
+  
+    </div>
+  
+    <div class="video-preview3">
+  
+      <div class="thumbnail3">
+        <img class="thumb3" src="Thumbnails/thumbnail3.webp">
+        <div class="video-time3">9:44</div>
+      </div>
+  
+      <div class="video-info3">
+  
+        <div class="channel-pic3">
+          <img class="pic3" src="channel-pics/channel-pic3.jpg">
+        </div>
+  
+        <div class="info3">
+          <p class="title3">
+            I Asked Googlers How To Get Hired
+          </p>
+          <p class="channel3">
+            Namanah kapur
+          </p>
+          <p class="view3">
+            450K views &#183 1 month ago
+          </p>
+        </div>
+  
+      </div>
+    </div>
+  
+      <div class="video-preview4">
+  
+        <div class="thumbnail4">
+          <img class="thumb4" src="Thumbnails/thumbnail4.webp">
+          <div class="video-time4">10:30</div>
+        </div>
+    
+        <div class="video-info4">
+    
+          <div class="channel-pic4">
+            <img class="pic4" src="channel-pics/channel-pic4.jpg">
+          </div>
+    
+          <div class="info4">
+            <p class="title4">
+              I Built 100 wells in Africa
+            </p>
+            <p class="channel4">
+              MrBeast
+            </p>
+            <p class="view4">
+              80M views &#183 5 days ago
+            </p>
+          </div>
+    
+        </div>
+      </div>
+  
+      <div class="video-preview5">
+  
+        <div class="thumbnail5">
+          <img class="thumb5" src="Thumbnails/thumbnail5.webp">
+          <div class="video-time5">30:43</div>
+        </div>
+    
+        <div class="video-info5">
+    
+          <div class="channel-pic5">
+            <img class="pic1" src="channel-pics/channel-pic1.jpg">
+          </div>
+    
+          <div class="info5">
+            <p class="title5">
+              THE SIGHTS OF SPACE:A Voyage to spectacular Alien Worlds
+            </p>
+            <p class="channel5">
+              melodysheep
+            </p>
+            <p class="view5">
+              4.2M views &#183 11 months ago
+            </p>
+          </div>
+
+        </div>
+    
+      </div>
+
+      <div class="video-preview6">
+  
+        <div class="thumbnail6">
+          <img class="thumb6" src="Thumbnails/thumbnail6.webp">
+          <div class="video-time6">2:54</div>
+        </div>
+    
+        <div class="video-info6">
+    
+          <div class="channel-pic6">
+            <img class="pic6" src="channel-pics/channel-pic6.jpg">
+          </div>
+    
+          <div class="info6">
+            <p class="title6">
+              Top 10 Most Dramatic Moments Of The 2022 F1 Season!
+            <p class="channel6">
+              Formula 1
+            </p>
+            <p class="view6">
+              4M views &#183 a year ago
+            </p>
+          </div>
+    
+        </div>
+      </div>
+  </div>
+  
+  <div class="shorts-grid">
+
+    <div class="shorts-preview1">
+      <div class="thumbnail7">
+        <img class="shorts1" src="Thumbnails/thumbnail7.webp">
+      </div>
+      <div class="shorts-info1">
+          <p class="shorts-title1"> 
+            Doraemon new episode! #shorts
+          </p>
+          <p class="shorts-view1">
+            550K views
+          </p> 
+      </div>
+    </div>
+  
+    <div class="shorts-preview2">
+      <div class="thumbnail8">
+        <img class="shorts2" src="Thumbnails/thumbnail8.webp">
+      </div>
+      <div class="shorts-info2">
+          <p class="shorts-title2"> 
+            Could you walk up a Skycraper!?
+          </p>
+          <p class="shorts-view2">
+            45M views
+          </p> 
+      </div>
+    </div>
+
+    <div class="shorts-preview3">
+      <div class="thumbnail9">
+        <img class="shorts3" src="Thumbnails/thumbnail9.webp">
+      </div>
+      <div class="shorts-info3">
+          <p class="shorts-title3"> 
+            stickman fight (FLIPCLIP)
+          </p>
+          <p class="shorts-view3">
+            580K views
+          </p> 
+      </div>
+    </div>
+
+    <div class="shorts-preview4">
+      <div class="thumbnail10">
+        <img class="shorts4" src="Thumbnails/thumbnail10.webp">
+      </div>
+      <div class="shorts-info4">
+          <p class="shorts-title4"> 
+            1 Yera of owning a SUPRA!
+          </p>
+          <p class="shorts-view4">
+            1.7M views
+          </p> 
+      </div>
+    </div>
+
+    <div class="shorts-preview5">
+      <div class="thumbnail11">
+        <img class="shorts5" src="Thumbnails/thumbnail11.webp">
+      </div>
+      <div class="shorts-info5">
+          <p class="shorts-title5"> 
+            Googles GEMINI just SHOCKED the ENTIRE INDUSTRY!
+          </p>
+          <p class="shorts-view5">
+            2.1M views
+          </p> 
+      </div>
+    </div>
+
+  </div>
+  
+</body>

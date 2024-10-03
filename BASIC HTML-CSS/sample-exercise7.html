@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      height: 1000px;
+    }
+    .header{
+      background-color: black;
+      height: 70px;
+      display: flex;
+      position: fixed;
+      width: 100%;
+      left: 0px;
+      top: 0px;
+    }
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding-top: 80px;
+      padding-left: 250px;
+    }
+    .div1,.div2,.div3{
+      height: 300px;
+      width: 300px;
+    }
+    .div1{
+      background-color: lightcoral;
+    }
+    .div2{
+      background-color: lightblue;
+    }
+    .div3{
+      background-color: lightgreen;
+    }
+    .sidebar{
+      background-color: red;
+      position: fixed;
+      left: 0px;
+      bottom: 0px;
+      top: 70px;
+      width: 200px;
+    }
+    .a,.b,.c{
+      display: inline-block;
+      height: 5px;
+      margin-top: 8px;
+      height: 40px;
+      width: 100%;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">header</div>
+  <div class="sidebar">
+    <div class="a">1</div>
+    <div class="b">2</div>
+    <div class="c">3</div>
+  </div>
+  <div class="grid">
+    <div class="div1">div1</div>
+    <div class="div2">div2</div>
+    <div class="div3">div3</div>
+  </div>
+  
+</body>
+</html>

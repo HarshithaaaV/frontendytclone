@@ -1,0 +1,42 @@
+.shorts-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 10px;
+}
+.shorts-preview1,.shorts-preview2,.shorts-preview3,.shorts-preview4,.shorts-preview5{
+  display: inline-block;
+  height: 550px;
+  width: 260px;
+  cursor: pointer;
+}
+.thumbnail7,.thumbnail8,.thumbnail9,.thumbnail10,.thumbnail11{
+  display: inline-block;
+  width: 100%;
+}
+.shorts1,.shorts2,.shorts3,.shorts4,.shorts5{
+  width: 100%;
+  height: 450px;
+  border-radius: 15px;
+}
+.shorts-info1,.shorts-info2,.shorts-info3,.shorts-info4,.shorts-info5{
+  display: inline-block;
+  width: 100%;
+}
+.shorts-title1,.shorts-title2,.shorts-title3,.shorts-title4,.shorts-title5{
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: 700;
+  margin-left: 2px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+.shorts-view1,.shorts-view2,.shorts-view3,.shorts-view4,.shorts-view5{
+  margin-left: 5px;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0px;
+  margin-left: 2px;
+  color: rgb(79, 77, 77);
+}
